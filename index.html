@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xtremsmash</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Xtremsmash</h1>
+    <div>
+      <button id="login-btn">Login con Google</button>
+      <button id="logout-btn" style="display:none;">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="carta">
+      <h2>Carta</h2>
+      <div class="item" data-nombre="Cheeseburger" data-precio="8.5">
+        <strong>Cheeseburger</strong> - 8.5€
+        <button class="add-btn">Añadir</button>
+      </div>
+      <div class="item" data-nombre="Bacon Xtreme" data-precio="9.5">
+        <strong>Bacon Xtreme</strong> - 9.5€
+        <button class="add-btn">Añadir</button>
+      </div>
+    </section>
+
+    <section id="carrito">
+      <h2>Carrito</h2>
+      <ul id="carrito-lista"></ul>
+      <p>Total: <span id="total">0</span>€</p>
+    </section>
+
+    <section id="reservas" style="display:none;">
+      <h2>Reservar</h2>
+      <input type="date" id="fecha" />
+      <input type="time" id="hora" />
+      <input type="number" id="personas" placeholder="Personas" min="1" />
+      <button id="reservar-btn">Reservar</button>
+
+      <h3>Mis reservas</h3>
+      <ul id="mis-reservas"></ul>
+    </section>
+  </main>
+</body>
+</html>
